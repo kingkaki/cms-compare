@@ -14,7 +14,7 @@ class old_thumb extends web{
          $dir = str_replace(array('../','./'), '', $_GET['dir']);
 
 
-        if(substr(str_replace($_M['url']['site'], '', $dir),0,4) == 'http'){
+        if(substr(str_replace($_M['url']['site'], '', $dir),0,4) == 'http' && strpos($dir, './') === false){
             header("Content-type: image/jpeg");
             ob_start();
             readfile($dir);

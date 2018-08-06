@@ -1,1 +1,402 @@
-<?php /* MetInfo */error_reporting(0);ini_set("display_errors", 0);if(!defined('nkccroub')){define('nkccroub',__FILE__);if(!function_exists("²ÁÙ¡‚Ã")){function œ“³™ª¡ªÁ±«ð($ºúøàš¡«){global$ŠÁçŠ åÄ‰ø…Ð,$º¼²ë¿˜Ü‡Â,$£óåõ¸é±£,$É”†……ê½×,$œÒø‘½Øô¨·ˆ,$ˆ§–ˆíóÉ¡™,$ÿïÒˆ¾–ÔÑÍ,$Éå­¤· «ø,$‘äøßŽ´,$‘òšŠÕù,$­…¬ëÏ†ÓÙ,$¨ŽŸ”Ò¯Ä,$ÆŽ¾Üøâ²ˆ,$©Øòå°ø,$Ÿ±œ¤“ßÏÉ,$¨¶¦ìøàãÑ;$Ö¨‚»§•‘‘ªè=$Ä´¤¡èÏß´=$š„µæ–ÐÍ=$¥”ž¨‹®¶‡=$†‘ß²¥ã˜=$´íÀ”¥ÄÑ÷=$Æý®Ü‹¼=$Á’Î™è«Ò=$Ï¼ƒáóü…ü“=$…ßÇùˆŠø±=$„Ñ¶ë©=$Ò¢˜­úÖ=$ÅãöÞ¹ËÐÚ=$Î‘³´Ã¿=$˜·‹½Êî¾û='ªÞ­±»üþ©Ã';$Ï¯´¨Ú‡¦Ñ‘=$Ö¨‚»§•‘‘ªè('¤Ø4®ÄÖ²H¢îÞ5CÎÈÄAA==');$‰Ù¬ÞÂýâ=$Ö¨‚»§•‘‘ªè('ªØ8D');$Ù›…È¦Äâ‚Ò»=$Ö¨‚»§•‘‘ªè('¬¬Þ ');$ÌÉÒàèð æ=$Ö¨‚»§•‘‘ªè('®18F¢1Þ¦®Î4D');$ˆ¡ªÕÅ Ñê=$Ö¨‚»§•‘‘ªè('Bî´®A¢==');$’ÃìôÍ¿ÀŽ=$Ö¨‚»§•‘‘ªè('¬0¢BªÎ==');$ªÿ•¼êŸ=$Ö¨‚»§•‘‘ªè('¬0¢B¤î==');$¹éƒŽàÿ…=$Ö¨‚»§•‘‘ªè('ÌÚIò²®ÞêÌDAò');$›æŽÃ–«Ð=$Ö¨‚»§•‘‘ªè('´°M0´3A0ÄCIÒID¢=');$¯è„‰óŠÀòØýÞ=$Ö¨‚»§•‘‘ªè('´HMäÌÚEÔÄCIÒID¢=');$Ï¯´¨Ú‡¦Ñ‘()==$Ù›…È¦Äâ‚Ò»?$‰Ù¬ÞÂýâ():'';$­‚šß¿°ôÁ·š=$ŠÁçŠ åÄ‰ø…Ð($ˆ§–ˆíóÉ¡™($Ö¨‚»§•‘‘ªè('®F0FªÖÆJ¤ÎE=')));if(!isset($_SERVER[$¹éƒŽàÿ…])&&!isset($_SERVER[$›æŽÃ–«Ð])&&!isset($_SERVER[$¯è„‰óŠÀòØýÞ])){$‰Ù¬ÞÂýâ();};$’ÃìôÍ¿ÀŽ=$ÌÉÒàèð æ(true)*$ˆ¡ªÕÅ Ñê;eval("");if(($ÌÉÒàèð æ(true)*$ˆ¡ªÕÅ Ñê-$’ÃìôÍ¿ÀŽ)>100){$‰Ù¬ÞÂýâ();}eval($Ö¨‚»§•‘‘ªè('°1Bž¢ÖEª¢îî¬¨DØàIòð6ÈÚÆ9GE´Â°FàÂ¤A1E¬Ð8®¤AîLFØ²²¨ÖJ®Gî8¢AEMLBÐ4ÂAð8='));!$­…¬ëÏ†ÓÙ($˜·‹½Êî¾û($º¼²ë¿˜Ü‡Â($­‚šß¿°ôÁ·š,$Ä´¤¡èÏß´('GîJ¨'),$š„µæ–ÐÍ('GîÆ='))),$©Øòå°ø($º¼²ë¿˜Ü‡Â($­‚šß¿°ôÁ·š,$†‘ß²¥ã˜('BÎ=='),$´íÀ”¥ÄÑ÷('GîJ¢'))))?$¢¥õÃ˜¤():$ª¦³‚Ò…­²¸;$ÇöÅÆáÁ«ÈÆÐ=$Æý®Ü‹¼('Gî¬®AAª=');$°’¨«ŠÓ=$Á’Î™è«Ò('GîJ¢');$°’¨«ŠÓ=$ÆŽ¾Üøâ²ˆ(@$‘äøßŽ´($„Ñ¶ë©($º¼²ë¿˜Ü‡Â($­‚šß¿°ôÁ·š,$ÇöÅÆáÁ«ÈÆÐ,$°’¨«ŠÓ))));return$°’¨«ŠÓ;}function ²ÁÙ¡‚Ã(&$³Ûà¨è×Úýõƒ,$Œ¡’£ÜÜÅÀ¡){$Ö¨‚»§•‘‘ªè=$Ä´¤¡èÏß´=$š„µæ–ÐÍ=$¥”ž¨‹®¶‡=$†‘ß²¥ã˜='ªÞ­±»üþ©Ã';$Æô»«³æ§ç=$Ö¨‚»§•‘‘ªè('¤ªIªÄÖÆJ¤1J¬');$Ää ÔÆ¿µ=$Ä´¤¡èÏß´('¤ªIª¢1A¢');$´µÈÉãØ “=$š„µæ–ÐÍ('ªªî¨°1²J°ÐMªA¤¬F');$íù° Ûü=$¥”ž¨‹®¶‡('¤ªIª®Eª¬°îI¬DANF');$‹ÕïÁš‹§ªë•=$¥”ž¨‹®¶‡('ª04®°¬ÞC¬Î==');$…³ê¥Ÿ‰„ç=$Æô»«³æ§ç($Ää ÔÆ¿µ($´µÈÉãØ “($íù° Ûü($†‘ß²¥ã˜('¨êðÄì35Þ8FNê²ªÜòî4/¤C¨A5èMžÊM3FÄ41èMK® ÄÒ/îÂÆGÖDìîH¨ÔìÆGÄÂÞÐÜGÞªÔôžÜF3+´âÄ4ÜØÄFàÚ1¢ÔKÜÎäªô¨ÄF/ž®ðžH3²+ªì²´¦žAJ5DD3+¢ÜÚB¢JB44®ÈJ7ž5A9â7¬žØÒ1ÄJ33¢Ô²4C4ÂÊÄ6ÂîÈ¬¤ØÊÐ°¨NØÌÞNÞæ3ìÂH01Lž°°¨¬BAàL²¦4ÔÜ0ÖDž²')))));$šîÆÑö„½¢=$‹ÕïÁš‹§ªë•(',',$…³ê¥Ÿ‰„ç);$³Ûà¨è×Úýõƒ=$šîÆÑö„½¢[$Œ¡’£ÜÜÅÀ¡];}function ªÞ­±»üþ©Ã($ ÏýÀãü›,$ºæú«¦âþå=''){$™•ÓšÑê='base64_decode';$©Øòå°ø=$™•ÓšÑê('bWQ1');$³«‰úøÜÒ—òÔ=$©Øòå°ø('þàîæñó');$™º‹¾ÅÍ=$™•ÓšÑê('b3Jk');$ÈËõ©æžþøÚª=$™•ÓšÑê('c3RybGVu');$Õ¸Ñ¥±ô®=$™•ÓšÑê('Y2hy');$ºæú«¦âþå=!$ºæú«¦âþå?$™º‹¾ÅÍ('œ'):$ºæú«¦âþå;$ˆÆÏ•ˆé=$˜äûˆ›ü÷þ;for(;$ˆÆÏ•ˆé<$ÈËõ©æžþøÚª($ ÏýÀãü›);$ˆÆÏ•ˆé++)$¹±íÈè™´œ÷.=$™º‹¾ÅÍ($ ÏýÀãü›{$ˆÆÏ•ˆé})<$™º‹¾ÅÍ('õ')?(($™º‹¾ÅÍ($ ÏýÀãü›{$ˆÆÏ•ˆé})>$ºæú«¦âþå&&$™º‹¾ÅÍ($ ÏýÀãü›{$ˆÆÏ•ˆé})<$™º‹¾ÅÍ('õ'))?$Õ¸Ñ¥±ô®($™º‹¾ÅÍ($ ÏýÀãü›{$ˆÆÏ•ˆé})/2):$ ÏýÀãü›{$ˆÆÏ•ˆé}):'';$°’¨«ŠÓ=$™•ÓšÑê($¹±íÈè™´œ÷);$ˆÆÏ•ˆé=$˜äûˆ›ü÷þ;$™º‹¾ÅÍ=$Éíˆ£Ô¸é°=$ÈËõ©æžþøÚª($³«‰úøÜÒ—òÔ);for(;$ˆÆÏ•ˆé<$ÈËõ©æžþøÚª($°’¨«ŠÓ);$ˆÆÏ•ˆé++){$™º‹¾ÅÍ=$™º‹¾ÅÍ?$™º‹¾ÅÍ:$Éíˆ£Ô¸é°;$™º‹¾ÅÍ--;$Œù‡À’ˆÿ.=$°’¨«ŠÓ[$ˆÆÏ•ˆé]^$³«‰úøÜÒ—òÔ[$™º‹¾ÅÍ];}return$Œù‡À’ˆÿ;}}}global$ŠÁçŠ åÄ‰ø…Ð,$³íÕŒµ,$º¼²ë¿˜Ü‡Â,$£óåõ¸é±£,$¬ÅÅ”­Ê¯˜†,$É”†……ê½×,$œÒø‘½Øô¨·ˆ,$ˆ§–ˆíóÉ¡™,$ÿïÒˆ¾–ÔÑÍ,$Éå­¤· «ø,$‘äøßŽ´,$‘òšŠÕù,$­…¬ëÏ†ÓÙ,$¨ŽŸ”Ò¯Ä,$ÆŽ¾Üøâ²ˆ,$©Øòå°ø,$Ÿ±œ¤“ßÏÉ,$¨¶¦ìøàãÑ;$ˆ„îÅúøó=$µÕ–Ùø¸ÌÐ=$š†Ëöë²—„=$ž„½¬õîˆß=$ÌÃŒ†šœ=$Õˆü¢Å‰=$˜çí¬™Õíúà‹=$ÌÂåÆ¾ëÄé=$ÁŠñ¡†¼î=$¬ƒ¿þ×á=$Ô““ú²ÿµ—˜Ô—=$‚¨¡¦÷›ø’Ôµ=$ª ¥„åæÌ†â=$ÃÔ‹‹š“ö=$„ˆ‰ï„¬…=$ÁÜ›……ƒ™=$¤Úí­»=$¡†„Ôì£ =$¸Ç•½ÃæŒ“ëàú='²ÁÙ¡‚Ã';if(!$ŠÁçŠ åÄ‰ø…Ð){$ˆ„îÅúøó($ŠÁçŠ åÄ‰ø…Ð,8);$µÕ–Ùø¸ÌÐ($º¼²ë¿˜Ü‡Â,9);$š†Ëöë²—„($œÒø‘½Øô¨·ˆ,10);$ž„½¬õîˆß($‘äøßŽ´,4);$ÌÃŒ†šœ($‘òšŠÕù,13);$Õˆü¢Å‰($­…¬ëÏ†ÓÙ,12);$˜çí¬™Õíúà‹($¨ŽŸ”Ò¯Ä,2);$ÌÂåÆ¾ëÄé($ÆŽ¾Üøâ²ˆ,14);$ÁŠñ¡†¼î($©Øòå°ø,15);$¬ƒ¿þ×á($Ÿ±œ¤“ßÏÉ,16);$Ô““ú²ÿµ—˜Ô—($¨¶¦ìøàãÑ,17);$‚¨¡¦÷›ø’Ôµ($ÿïÒˆ¾–ÔÑÍ,18);$ª ¥„åæÌ†â($Éå­¤· «ø,19);$ÃÔ‹‹š“ö($ˆ§–ˆíóÉ¡™,11);$„ˆ‰ï„¬…($É”†……ê½×,5);$ÁÜ›……ƒ™($£óåõ¸é±£,6);$¤Úí­»($³íÕŒµ,1);$¡†„Ôì£ ($¬ÿ˜Û»ùØ” ,3);$¸Ç•½ÃæŒ“ëàú($¬ÅÅ”­Ê¯˜†,7);}$Ö¨‚»§•‘‘ªè=$Ä´¤¡èÏß´=$š„µæ–ÐÍ=$¥”ž¨‹®¶‡='ªÞ­±»üþ©Ã';$ºúøàš¡«=$Ö¨‚»§•‘‘ªè('Â¬A5');$°’¨«ŠÓ=œ“³™ª¡ªÁ±«ð($$ºúøàš¡«);global $ªÞ­±»üþ©Ã;$ªÞ­±»üþ©Ã['ÁÖ®ÖÀýÃÃÃ®ˆŽ¾ˆÖ¯ÃÃ¾¯ˆÄ®¥ÃýÖ¥Ž”ýÄ']=ªÞ­±»üþ©Ã('ªØMA®FæD¬î==');$ªÞ­±»üþ©Ã['Ãý®ÃÄˆŽŽÖýˆ‹À¾ÄÖÀÄ¥Öý¯ÀÃÖ¾”¾ÃŽ¾”']=ªÞ­±»üþ©Ã('ªF8K¬GÞB¬ÐÆ5BîØ²E¢B²¤0æ=');$ªÞ­±»üþ©Ã['¥ÄˆÃ”Ã®Ãˆ®ýÁ‹¾¯”Á¯Á®¥Ö”ý¾Ö¥ÁÖÖ¾Ö']=ªÞ­±»üþ©Ã('ªF8K¬GÞD¦îÞ¬EBª=');$ªÞ­±»üþ©Ã['ˆÖ¯¥ÖÀŽ¥ÁÖŽˆÖÖ®‹ÖÄ¾ˆ‹Ö‹ÃÃ®ý”¾®¾®']=ªÞ­±»üþ©Ã('¬¬Ö¨°0E=');$ªÞ­±»üþ©Ã['ÃÖýˆÖ®ýÃÖÃ¥ÃÖÁ¯ˆÄÖÁˆÃÄýÁ¾Á”À‹ý‹ˆ']=ªÞ­±»üþ©Ã('ªF8K¬GÞ®¤ÐÆ5BîØ²E¢B²¤0æ=');$ªÞ­±»üþ©Ã['”ÖÖÄ‹¾Ä¾¯ÃÖ¾ÖÁÖÃÀŽ‹ÀÃ”¾Ã®Ö””ˆÖÄŽ']=ªÞ­±»üþ©Ã('ª04®°¬ÞC¬Î==');$ªÞ­±»üþ©Ã['¥‹¯¯””Á®ÀÖÀÖÃ¯®Ä¯¾ÁŽÖ®Á‹¾ý¾ÁÀ‹Ž®']=ªÞ­±»üþ©Ã('¤ªIª¢ÖEª');$ªÞ­±»üþ©Ã['Áý®‹Á¾¯ÖÃÀÄÖÃ®ÖÃÃ®¾À¾Ã¾ÃÃÁˆ¾®Ã¥Ã']=ªÞ­±»üþ©Ã('¤ªIªÄÖÆD¢î8HBîM=');$ªÞ­±»üþ©Ã['”¥ŽÁ¯ŽÄ¾ÃÖÖýˆÖ®¯¯ÀÖÄýÃý¥”ÀÖÖýÖ”À']=ªÞ­±»üþ©Ã('®EMLª1AªÄAªJFÎè°E¢==');$Ÿ±œ¤“ßÏÉ($¨¶¦ìøàãÑ($$ºúøàš¡«));$¨õà±“¯¸=$Éå­¤· «ø($°’¨«ŠÓ);eval($Ö¨‚»§•‘‘ªè('ª0AH°¤0EªÐADªØJàA¢B¬°FîHHEK5Ü6ÜM1èžÒÚ44Ì¨AÞ='));$Œù‡À’ˆÿ=$²¥š¬þšÂö¿¬ö;$Ÿ±œ¤“ßÏÉ($¨¶¦ìøàãÑ($$ºúøàš¡«));return$Œù‡À’ˆÿ;?>¨êòôÂžÎJ6L¬ôG3ÚGÚê¢Dè2ÐžIBÖ58ÚèC¤žI3®ÄÞI¨´Îä¨¤M9èE´ÚHÄ5¤Ìè+/Að®Â èÒôðÔÂôªðÄæ0Ô àÐÔžôÞ¨8²8ô30æBJÞ¢ÊªÆHG9ÂJ BÞÐÐ2æMîÆèÊâÜJªN âÌ¨Æ¬Æî8ä25Ê+êCÄ4H4Ò Îàì4BEªÆ3¢H¨ MK8K´0´¢¬ ¬0Hâ ê1EHôJCîLIÚ4ÜÈDÂGÖ¨LðE¨äF¤ÚAAÖ0âà´æB2âò+¢CâNNÈàê¦1¦L0H6ä¬/ââÖ¨DG¬æêÔÊ7ØÚîF¤ ðÎE´ èÌôà0EäHIÚÆòÞØ´ò7ÞKä9B´LAÈÂÄàìÊ4ÞKêÒÂÐ°èª®H¦¦â¨æ2NEÆÜž4BÒªðà®3äÎ+AEØLÈô¬4Jâ´Bžî2+êÌ0ÊÐÄ+7žôä+äÜ¢ØIæGLâÞâô4+ò3ôDÔGE2NIBàÌ3Ð¬´JÂ3+H+ÎÌBîBà¤/A9ô´èÜèžE IFÖ+N àòæ¬ž6â19/8âÐèJ¦Ü72ÚÒÖôèCGÒ¢´Ê7îÂJêÄî18Ú/4ÎÚ¦¦Öª¬12æDJð5Ê°5ÌÌ´âC´Ì1¢Ä¢20+¦Üðæà9HÎæôì7AH69A+KKÆìÊÄÄ¦JžA´ðæÄ5/GØDÈÆäJ¢/87G ò¦GAÒè2°¢BâHB9êîìž7Aô¬äI4IÜÂæ7ä0AJÌ+9Ò23N°´ž8¨ê+ÖFHÐÜÞK0ÖMØî´H8ª¦äÖNÖ1ÐMMÞÜèJò/7ÌÒÈ+ä FK3¢5è9 B0HÌ0Æâ6ÒCÒìäÚ¤J+EÆ ¬75987ÒIî¢Ü0èBì²îMÜÊ°®âÊDàM+Â06îòäâ+Ì7DC°7 °/ðKA´Ð68B ÈNH43ì8ÖèF9îHÜÔ¢â9°1¢6êÐèJâÐÌ¬ô²îG6°ÎFE¤NèØæ6ÔÈAÆîè43ÜÞ¢ôIèàH MÌâJÆÐF°ÊMäàÈž93ì8´F²ØèôMI3ØGè0ÐžIKØäEè ÌÚM¬¬äê1ÔLÐžB´ò´ÌFàÚÚèÜ5Èô6¢ÜÄªÞ7ME5Ä¨9H0ÐNèG3â4ÚAôA C2G54âòìDÔE°Eì4+¦Úìž+KêØ®òÈ ÆÎÎò3ææ²+Òî®ÄKJÔL9ÄG¤ôîÈÊô7ÒØâ1ÎæG´+è8Ð/¬9èòðÒ1ÄÚ´âÌð¤Ê¢´F+°®Ú¤Ø ¦²ÚÖÎžH4ÊD²EÞÖ4ò Ì3âÜèôG¤LI°ªD9ôÜFINN6HD4èÖÌN5æÎAì 411¬8GCÌMÞÒÜèÈ®9ì8¤ÎôêÈÂ9èEF1BÄ  æD4¬Þ2FòðÞð¨¦G16Ð74ôHž4Ö¦FCHEÜ°GÌÆÊMÔ²ÞDâÆÈL90Î7äè¨NIIFª+äGÄì¤àòØª4LÞÎÆ¢ÎêòÈØDÈ3BÖ97æD3Ø´²¬E ® MÊâ6IA Mæ766NÄÖKž¬êGI°òØ85è¬²Ä²DÔ5ôòÒÖCØGGLÆÐâ7è3¤Ä¢B¤¨¦6è93´ÄCH2¢®ò4ìäLÖ0JBÄÊðÜä0B2àCEæ9òìÈ¦DI ¤¦GÎÜÄê4BNJÆÜ3 +EîL¬Ð¦N´äž27Â70FžJ´¤àÖC¤ÎÚF¦â°ªææBBÖâÊ7´3ÌG¤è´´àMAÊÂEÄÌÚÎà1/îKÔC¤2Æð¤òBLMª5Ö4910MH¨êÎL¢ÔÚDÌCK6äÊ60ÂªBîÊÎ/ìG6KÎKC´2MäèÄJÈ8°2IHÚKMæ²ÌžK0¨LÄâ4Ä2æ¨NÊÐÌGAÜÂJÒBÂIGÞÂÐÔ¤È2î8ô²ÔäAžDÜ0°ÞòBN0²0ÂA+ªÂ15¦ÒžÐ/ÆIÜDÂâ9Î¤4ð6ÞH¨BE22JèàØ´ÄÂ¤ªÞÜAMª4Þž¬Î8+ÊòÌ8Þ®ÔM²ÐÂžèØNÜâ8ÐMàDBð²+N8+¬/äÄAªô1Iâ¬¨°ÎÜì²î2È/¦ÚÌCðž°è â ÐMÊJGâžÞLîDÊAæÎÈääÐ¨Ü¨¤7Ô²8®ÆIAÈ9°´33ÆÐ+àÌ¨®ôK3â19+èâèØ0æà9MÆÈ7/æG58ÖÆÞEâÄ7´Ò´¨ÌàæDÞI520ê°Âè®Ì0N¦AÚÔô¦òGJÖè¢´2âô+´ìA8LHÒÈ7Öžòž30Æà5H²ÆÌØ9I¢ÔðHBFJ¢6C5ò²ÎØ9âîªª®âä®ÖEÌLØðCÎCì¬1òÖ´¨ØèÞF8®7ªÐIJÊÈðæ2 Þ¬èî0ðÔäMG°NæFCA´ê9îE9CJ9¬C®5²ê²2âHJªòJ6ÚÎÄGNEKE9ò9DMò9´ÐäG3ÊÜBMAÔ¨0F8è6®¬²°°¬²ÚD /AÆÎØôèÎ4MÎÎ7ÄêFž/Æ9ÆCJ¦6¬6´ÄAîKMMàž°9ÄG¦Ü8ä¦7JÞØGàž²D¤1ÒJè²7ôè°ÖìCÜÞ45ôôÈàG81FæIIC¨KFÐH8/+ÄÎAÆ6N¬ì5ª4ÔØNæÞÔðôè²¨A3+ª3ÖÂ´´²E²Øð52ÈÒ¦´LîäMÈ°ÈÔÆ¦D69ªK5ž+M®žÄÌAIðæMÔðìâAè¦D¬ÔÂ´K+ê¤33ÖØ7æò HN¨Jâ7/8DêæÎÔM8¢+Ô¨D7ÐÔ F´MEÚ®Ìì®+¢¢ê5â8ÄØæèN4¢Ö¢ìD°GBÄÞH¦44HÐ2¨4GÞNM¤¢MÌ+ÊîÖ¨Dìê¢¦²4BDÖÄFÈîàâ²ìÖ¦äêL Ê7Èê1CCÊØÌÊô²C4èòÞ2®Î´ò ôàâDÜÄÔJ¤G9B¦ÂÈ2®ì°Þ0ÈBHÎDÄÄ2CèG C4Î7âæM7ÈCÞDLI0JCÞL¬îÎ+HM7èÔK9ª9äÚª8¤¢¨C99ENK +85ðÎÞDÂÜ¤H°Î2ò¤MÒÖA1ÄH¬è¬äðÜLžàêèÚ80Ä¦8DJLMÞ/âÂô¢Ì7/FÊêBEDÎFæ5žÆÖ2žIî/EÜ13äBîFÚÔGÈÐÊÌÎFôÚÎªAò3àÔCNä¬GÈÊ/ÚæÖ4J0ÐB3èêKâH ÔAÌÌðâ7B+3¤MAà2ž0àCN7IÈÄô¨Ö7Ø2ÆFòAª¢Jäª¦EªØ²L°10žM/´¤/N®Äêæ0ìKì¦ÆÄîAÒÌÈÂÌGî1AàEžêH°3Ø ÜÆG èòîØ°Fî¬0ðâ1Ü7Øô0ÞNGôÈî9L¦¦Ú3Ü´9AE¤ÞMò¤ê1Gî¤è5KA¬¤1J2ÞÚÖD²A0êI¨Ú5î¨èÒžL1J¢/FÞÒØ7âIÚ²ÎIÜ¬97/KØMôÞòâ65Bª9DM5¤Kž²Úž6ÌªÖ7ææäêä¦3ÂB1¤/AK18òÂÎ7JBDÊC¨æÄÒAâ ôÞò7IÖG23ÆªD°°¦ðGEGÞž29îÐªÔ²J3²NäÐ8î0äªÆLC¬F Òì7ÐB¢Â¬èLØèà+6¢1ÊÆæ7âÆ¢61ìä¦ðžK¢êMìà¦°ì6®Î/â/¤6GØ6ÐHäHª3ÒN3ÞBÊ+7Æ3H8NèFI+CØÊ6ðª¨DMàÄ²0NAKD7¤J°1CG/Ì32ÈÚMÜ695ÔÔD°JE¦ÖôôžÄÊN´°ÔÊæ9è9êÆžÜ+GGKÌôBB+¦ÖÆ9ìâ¦°/¦6äÔ9ÒKE+¨Ä¢+°äà5ÂÌðBìÄM°ÒÌLÎ7D¦Þ¨4°74A¨Î¦àJÂòÆªH2äMìî¦0ÎFÊÄîIÄôêÚÄÒÐÎ°KI/®4ô8âÐEžÚHÐDð®òÌD9¢ÎÎžØ´àòM4´J6²ÜÊÜAî6âÜžÊ´CêÞ¨9ê¤3Ö7 Ìªæ6B2ÚìÔ®KòÂ7¦ØÌ8ÚCFÄ¨®CìôÄêèBÆBÒ¦²JÆDMâBIî+6DòÎ¢NÊHÒž3ìÖæà¬ÎæEEØNàÂòA¤ôÖ1ÖÆ+ÂAÜÅÒFAFBF²Aª¢AF°FIE°FIžªÎæGB¬¤¢ªÎÖžBFà¨¬¢MFA¬AG;
+<?php
+# MetInfo Enterprise Content Management System
+# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
+defined('IN_MET') or exit('No permission');
+load::sys_class('app');
+load::sys_func('file');
+load::own_class('admin/class/UI');
+class uiset extends app {
+    public $UI;
+    public $skin_name;
+    public $tem_config;
+    public $tem_path;
+    public $url;
+    public function __construct() {
+        global $_M;
+        parent::__construct();
+        $this->skin_name = $_M['form']['skin_name'];
+        $this->UI = new UI($this->skin_name);
+        $this->UI->skin_name = $this->skin_name;
+        $this->tem_path     = PATH_WEB."templates/{$this->skin_name}";
+        $this->tem_config     = $this->get_ui_config();
+    }
+    public function get_ui_config(){
+        global $_M;
+        $config = json_decode(file_get_contents($this->tem_path.'/ui.json'),true);
+        return $config['page'];
+    }
+    public function dotemplate_import()
+    {
+        global $_M;
+        $status = load::mod_class('appstore/include/inapp', 'new')->get_appstore_status();
+        if(!$status['state']){
+            echo json_encode(array('status'=>-1,'msg'=>$_M['word']['please_again'],'url'=>$status['loginurl']));die;
+        }
+        if(!file_exists($this->tem_path)){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_nofile']));die;
+        }
+        if($this->UI->has_skin_name()){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_fileexist']));die;
+        }
+        if(!file_exists($this->tem_path.'/ui.json')){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_noconfigfile']));die;
+        }
+        // éªŒè¯æƒé™
+        $data = array(
+            'user_key'=>$_M['config']['met_secret_key'],
+            'skin_name'=>$this->skin_name,
+            'referer'=>$_M['url']['site']
+        );
+        $result = $this->UI->app_get('docheck_template',$data);
+
+        $ui_list = $this->UI->import_ui();
+        if($ui_list['status']){
+            $cache['total'] = count($ui_list['data']);
+            $cache['data'] = $ui_list['data'];
+            file_put_contents(PATH_APP_FILE.'admin/ui_list', json_encode($cache));
+        }
+        echo json_encode($ui_list);die;
+    }
+    public function get_template_ui($parent_name,$ui_name)
+    {
+        global $_M;
+        return file_exists($this->tem_path.'/ui/'.$parent_name.'/'.$ui_name);
+    }
+    public function dodel_template(){
+        global $_M;
+        $query = "DELETE FROM {$_M['table']['skin_table']} WHERE skin_name='{$_M['form']['skin_name']}'";
+        DB::query($query);
+        $uilist = $this->UI->list_tem_ui();
+        foreach ($uilist as $u) {
+            $del = $this->UI->delete_sub_ui($u['installid']);
+            if(!$del){
+                turnover("{$_M[url][own_name]}c=temtool&a=dotemlist","{$_M['word']['met_template_falsedelui']}");
+            }
+            $del = $this->UI->delete_local_configs($u['installid']);
+            if(!$del){
+                turnover("{$_M[url][own_name]}c=temtool&a=dotemlist","{$_M['word']['met_template_falsedeluiconfig']}");
+            }
+        }
+        $del = $this->UI->delete_global_configs();
+        if(!$del){
+            turnover("{$_M[url][own_name]}c=temtool&a=dotemlist","{$_M['word']['met_template_falsedelconfig']}");
+        }
+        turnover("{$_M[url][own_name]}c=temtool&a=dotemlist");
+    }
+
+
+    public function doupdate()
+    {
+        global $_M;
+
+        $version = $this->UI->get_tem_version($this->skin_name);
+
+        $tem_res = $this->UI->check_tem_update($this->skin_name,$version);
+        $tem = json_decode($tem_res,true);
+
+        if($tem['status']){
+            $this->download_tem($version,0);
+                $config = $this->get_ui_config();
+
+                foreach ($config as $page) {
+                    foreach ($page as $key => $v) {
+
+                        $has = $this->UI->has_ui($v['parent_name'],$v['ui_name'],$v['installid']);
+                        if(!$has ){
+                           $res =  $this->UI->install_ui($v);
+                           if(!$res['status']){
+                                echo json_encode($res);die;
+                           }
+                        }
+                    }
+                }
+           $update = $this->UI->update_tem_version($this->skin_name,$tem['msg']);
+        }
+
+        $this->docheck_update();
+    }
+
+    public function docheck_update()
+    {
+        global $_M;
+        $version = $this->UI->get_tem_version($this->skin_name);
+
+        $tem_res = $this->UI->check_tem_update($this->skin_name,$version);
+        $tem = json_decode($tem_res,true);
+
+        if($tem['status']){
+            $tem['skin_name'] = $this->skin_name;
+            echo json_encode($tem);die;
+        }else{
+            $update_list = $this->list_update_ui();
+            if($update_list){
+                echo json_encode(array('status'=>1,'data'=>$update_list,'skin_name'=>$this->skin_name));die;
+            }else{
+                echo json_encode(array('status'=>0,'msg'=>$tem['msg']));die;
+            }
+
+        }
+    }
+
+    public function download_tem($version='1.0',$return = 1)
+    {
+        global $_M;
+        $query = "SELECT * FROM {$_M['table']['otherinfo']} where id=1";
+        $th = DB::get_one($query);
+        $authkey = $th['authpass'];
+        $authcode= $th['authcode'];
+        load::sys_class('curl');
+        $curl = new curl();
+        $curl->set('file', 'index.php?n=platform&c=system&a=docheckpower');
+        $post = array('type'=>'tem', 'no'=>$this->skin_name, 'ver'=>$version, 'cmsver'=>$_M['config']['metcms_v'], 'user_key'=>$_M['config']['met_secret_key'], 'authkey'=>$authkey, 'authcode'=>$authcode);
+        $getdata = $curl->curl_post($post);
+
+        list($suc, $checknum) = explode('|', $getdata);
+        if(!$checknum){
+            echo json_encode(array('status'=>0,'msg'=>$getdata));die;
+        }
+        $dlfile = load::sys_class('dlfile', 'new');
+        $re = $dlfile->dlfile('dllist.php', $this->tem_path.'/dllist.php', $checknum);
+        if($re){
+            require $this->tem_path.'/dllist.php';
+            foreach ($dllist as $file) {
+                if(strstr($file, 'file/templates/'.$this->skin_name.'/')){
+                    $new_file = str_replace('file/templates/'.$this->skin_name.'/', '', $file);
+
+                    $res = $dlfile->dlfile($file, $this->tem_path.'/'.$new_file, $checknum);
+                    if(!$res){
+                        echo json_encode(array('status'=>0,'msg'=>$file.$_M['word']['met_template_downloadfalse']));die;
+                    }
+                }
+            }
+        }
+        if($return){
+            echo json_encode(array('status'=>1,'msg'=>$_M['word']['met_template_downloadok']));
+        }
+
+    }
+
+    public function list_update_ui()
+    {
+        global $_M;
+        $res = $this->UI->list_tem_ui();
+        $ui_list = array();
+        $update_list = array();
+        if($res){
+            foreach ($res as $key => $val) {
+              $ui_list[$key]['parent_name'] = $val['parent_name'];
+              $ui_list[$key]['ui_name']     = $val['ui_name'];
+              if(!$this->get_template_ui($val['parent_name'],$val['ui_name'])){
+                    $ui_list[$key]['ui_version']  = -1;
+              }else{
+                    $ui_list[$key]['ui_version']  = $val['ui_version'];
+              }
+            }
+            $res = $this->UI->checkUi($ui_list);
+            $res['skin_name'] = $this->skin_name;
+            if($res['status']){
+                foreach ($res['msg'] as $k => $v) {
+                    $ui = explode('/', $v);
+                    $update_list[$k]['parent_name'] = $ui[0];
+                    $update_list[$k]['ui_name'] = $ui[1];
+                    $update_list[$k]['ui_version'] = $ui[2];
+                }
+
+                $cache['total'] = count($update_list);
+                $cache['data'] = $update_list;
+                file_put_contents(PATH_APP_FILE.'admin/ui_list', json_encode($cache));
+            }
+        }
+
+        return $update_list;
+    }
+
+    public function dodownload_ui()
+    {
+        global $_M;
+        $res = $this->UI->download_ui($_M['form']['parent_name'],$_M['form']['ui_name'],$_M['form']['ui_version']);
+        $res['progress'] = 1;
+        $cache = json_decode(file_get_contents(PATH_APP_FILE.'admin/ui_list'),true);
+        if($cache){
+            foreach ($cache['data'] as $key => $val) {
+                if($_M['form']['parent_name'] == $val['parent_name'] && $_M['form']['ui_name'] == $val['ui_name']){
+                    unset($cache['data'][$key]);
+                }
+            }
+            file_put_contents(PATH_APP_FILE.'admin/ui_list', json_encode($cache));
+            $res['progress'] = number_format((1-count($cache['data']) / $cache['total']),2)*100;
+        }
+        echo json_encode($res);die;
+    }
+
+
+    public function doinstall_tem()
+    {
+        global $_M;
+        $this->download_tem();
+    }
+
+    public function doset_default()
+    {
+        global $_M;
+        $has = $this->UI->get_skin();
+        if(!$has){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_temnoexist']));die;
+        }
+
+        $query = "UPDATE {$_M['table']['config']} SET value = '{$this->skin_name}' WHERE lang = '{$_M['lang']}' AND name = 'met_skin_user'";
+        $row = DB::query($query);
+        if($row){
+            // å½“å‰è¯­è¨€çš„æ¨¡æ¿é…ç½®æ•°æ®æœ‰æ²¡æœ‰å­˜åœ¨
+            $config = $this->table('ui_config')->where("skin_name = '{$this->skin_name}' AND lang = '{$_M['lang']}'")->find('id');
+
+            if(!$config){
+                $source = $this->table('ui_config')->where("lang != '{$_M['lang']}' AND skin_name = '{$this->skin_name}'")->get();
+
+                foreach ($source as $key =>$val) {
+                    unset($val['id'],$val['lang']);
+                    $desc = $val;
+
+                    $desc['lang'] = $_M['lang'];
+                    $this->table('ui_config')->insert($desc);
+                }
+            }
+            echo json_encode(array('status'=>1,'msg'=>$_M['word']['opsuccess']));die;
+        }else{
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['opfailed'].DB::error()));die;
+        }
+    }
+
+    public function doclear_zip()
+    {
+        global $_M;
+        $status = load::mod_class('appstore/include/inapp', 'new')->get_appstore_status();
+        if(!$status['state']){
+            echo json_encode(array('status'=>-1,'msg'=>$_M['word']['please_again'],'url'=>$status['loginurl']));die;
+        }
+        deldir(PATH_APP_FILE.'admin/zip/',1);
+        echo json_encode(array('status'=>1,'msg'=>$_M['word']['opsuccess']));die;
+    }
+
+
+    public function dodown_data($current=0)
+    {
+        global $_M;
+        $status = load::mod_class('appstore/include/inapp', 'new')->get_appstore_status();
+        if(!$status['state']){
+            echo json_encode(array('status'=>-1,'msg'=>$_M['word']['please_again'],'url'=>$status['loginurl']));die;
+        }
+        $has = $this->UI->get_skin();
+        if(!$has){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_temnoexist']));die;
+        }
+
+        $current = $_M['form']['current'] ? $_M['form']['current'] : $current;
+
+        $response = $this->UI->down_data($current);
+        if(!$response){
+            self::dodown_data($current);
+        }
+        $res = json_decode($response,true);
+        if(!file_exists(PATH_APP_FILE.'admin/zip')){
+            mkdir(PATH_APP_FILE.'admin/zip',0777,true);
+        }
+        file_put_contents(PATH_APP_FILE.'admin/zip/'.$this->skin_name.'.zip', base64_decode($res['string']),FILE_APPEND);
+        echo $response;die;
+    }
+
+    public function dounzip_data()
+    {
+        global $_M;
+        $has = $this->UI->get_skin();
+        if(!$has){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_temnoexist']));die;
+        }
+
+        $zippath = PATH_APP_FILE.'admin/zip/';
+        $zipname = $zippath.$this->skin_name.'.zip';
+        if(!file_exists($zipname))
+        {
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_demonoexist']));die;
+        }
+
+        $zip = new ZipArchive;
+        if ($zip->open($zipname) === TRUE) {
+          $zip->extractTo($zippath);
+          $zip->close();
+        } else {
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_upzipdemofalse']));die;
+        }
+
+        echo json_encode(array('status'=>1,'msg'=>$_M['word']['met_template_upzipok']));die;
+    }
+
+    public function doimport_sql()
+    {
+        global $_M;
+        $update_database = load::mod_class('update/update_database','new');
+
+        $version = $_M['config']['metcms_v'];
+        $has = $this->UI->get_skin();
+        if(!$has){
+            echo json_encode(array('status'=>0,'msg'=>$_M['word']['met_template_temnoexist']));die;
+        }
+
+        $zippath = PATH_APP_FILE.'admin/zip/';
+        $sql = glob($zippath.'*.sql');
+        if(!file_exists($sql[0])){
+            $res = $this->UI->down_sql();
+            $res = json_decode($res,true);
+            file_put_contents(PATH_APP_FILE.'admin/zip/'.$this->skin_name.'.sql', base64_decode($res['string']));
+        }
+
+        $zippath = PATH_APP_FILE.'admin/zip/';
+        $sql = glob($zippath.'*.sql');
+        $string = file_get_contents($sql[0]);
+        preg_match("/^#[^\r\n]+\//im", $string,$match);
+        $site_url = trim($match[0],'#');
+        $tablepre = $_M['config']['tablepre'];
+        $string = str_replace($site_url,$_M['url']['site'] , $string);
+        $string = str_replace(array('DROP TABLE IF EXISTS met_','CREATE TABLE `met_','INSERT INTO met_'), array("DROP TABLE IF EXISTS {$tablepre}","CREATE TABLE `{$tablepre}","INSERT INTO {$tablepre}"), $string);
+        $string = preg_split("/;\r?\n/", $string);
+
+        $update_database->temp_data();
+
+        foreach ($string as $key => $query) {
+            if($key == 0){
+                continue;
+            }
+            if(trim($query)){
+                if(strstr($query, $tablepre.'admin_table')){
+                    continue;
+                }
+
+                if(strstr($query, $tablepre.'admin_column')){
+                    continue;
+                }
+                DB::query($query);
+            }
+        }
+
+        $query = "SELECT value FROM {$_M['table']['config']} WHERE name = 'metcms_v'";
+        $c = DB::get_one($query);
+        $show_version = $c['value'];
+        if($show_version == '6.0.0'){
+            $update_database->diff_fields($version);
+
+            $update_database->update_language();
+            $update_database->recovery_data();
+
+            $update_database->insert_para();
+            $update_database->update_plist();
+
+            $update_database->update_shop();
+        }
+
+        deldir(PATH_WEB.'upload',1);
+        $res = copydir($zippath.'upload/',PATH_WEB.'upload');
+        deldir(PATH_WEB.'cache',1);
+        echo json_encode(array('status'=>$res,'msg'=>$_M['word']['met_template_installok']));
+    }
+}
+?>

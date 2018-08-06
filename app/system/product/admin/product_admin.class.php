@@ -18,10 +18,10 @@ class product_admin extends news_admin {
 		//
 		//$this->shop = load::app_class('shop/admin/class/sys_goods', 'new');
 
+		if($_M['config']['shopv2_open']) $this->specification_admin=load::app_class('shop/admin/specification_admin', 'new');
 		if(!$this->shop = load::plugin('doproduct_plugin_class', '99')){
 			$this->shop = load::mod_class('content/class/sys_shop', 'new');
 		}
-
 		//$this->paraclass = load::mod_class('system/class/sys_para', 'new');
 		$this->paraclass = load::mod_class('parameter/parameter_op','new');
 		$this->para = load::mod_class('parameter/parameter_list','new');
@@ -48,20 +48,25 @@ class product_admin extends news_admin {
 		$list['class2'] = $_M['form']['class2_select'] ? $_M['form']['class2_select'] : 0 ;
 		$list['class3'] = $_M['form']['class3_select'] ? $_M['form']['class3_select'] : 0 ;
 		$list['class'] = $list['class1'].'-'.$list['class2'].'-'.$list['class3'];
+        $list['lnvoice'] = 0;
+		$list['auto_sent'] = 0;
+
 		$list = $this->shop->default_value($list);
 		$a = 'doaddsave';
 		$turnurl="&class1={$list['class1']}&class2={$list['class2']}&class3={$list['class3']}";
-
+        if($_M['config']['shopv2_open']){
+           	$list_s['paraku']=$this->specification_admin->dogetspeclist();
+			$list_s['speclist']=jsonencode($list_s['paraku']);
+			$list = array_merge($list, $list_s);
+        }
 		$class_option = $this->class_option($this->module);
 		$access_option = $this->access_option('access');
+		$_M['url']['help_tutorials_helpid']='98#1、基本信息';
 		require $this->template('own/product_add');
 	}
 
 	function doaddsave() {
 		global $_M;
-
-		// dump($_M['form']);
-		// exit;
 		$_M['form']['addtime'] = $_M['form']['addtype']==2?$_M['form']['addtime']:date("Y-m-d H:i:s");
 		$pid = $this->insert_list($_M['form']);
 		if($pid){
@@ -198,24 +203,21 @@ class product_admin extends news_admin {
 			$list['classother'] = substr($list['classother'], 0, -1);
 		}
 		$list['addtype'] = strtotime($list['addtime'])>time()?2:1;
-
-		//if($_M['config']['shopv2_open'])$list_s = $this->shop->default_value($list_s);
-		//
-
-		$list_s = $this->shop->default_value($list);
-		if($list_s){
-			$list = array_merge($list, $list_s);
-		}else{
-			$list = $list;
-		}
-		//
 		$list['updatetime'] = date("Y-m-d H:i:s");
 		$list['issue'] = $list['issue'] ? $list['issue'] : get_met_cookie('metinfo_admin_name');
 		//$list[description]=str_replace('&nbsp;','',$list[description]);
 		//$list[description]=str_replace(' ','',$list[description]);
+		if($_M['config']['shopv2_open']){
+			$list_s = $this->shop->default_value($list);
+			$list_s['paraku']=$this->specification_admin->dogetspeclist();
+			$list_s['speclist']=jsonencode($list_s['paraku']);
+			$list = array_merge($list, $list_s);
+		}
 		$a = 'doeditorsave';
 		$class_option = $this->class_option($this->module);
 		$access_option = $this->access_option('access',$list['access']);
+		$_M['url']['help_tutorials_helpid']='98#1、基本信息';
+
 		require $this->template('own/product_add');
 	}
 	function doeditorsave() {
@@ -344,6 +346,7 @@ class product_admin extends news_admin {
 		} else {
 			$tmpname = $this->template('tem/product_index');
 		}
+		$_M['url']['help_tutorials_helpid']='99';
 		require $tmpname;
 		//
 	}
@@ -561,6 +564,12 @@ class product_admin extends news_admin {
 		}
 		 return $copyid;
 	}
+
+    public function dodelpara()
+    {
+		global $_M;
+        $this->shop->delpara($_M['form']);
+    }
 
 	//下列全部继承news
 	// /*移动产品*/
