@@ -34,7 +34,7 @@ From: 'ObjectWeb' (http://www.objectweb.org/)
 
 From: 'OpenSymphony' (http://www.opensymphony.com)
   - OGNL - Object Graph Navigation Library (http://ognl.org) ognl:ognl:jar:3.0.1
-
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 From: 'Spring Framework' (http://www.springframework.org/)
   - Spring Framework: AOP (http://www.springframework.org) org.springframework:spring-aop:jar:2.5.6

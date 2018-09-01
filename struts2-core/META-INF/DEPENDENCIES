@@ -25,7 +25,7 @@ From: 'Apache Software Foundation' (http://velocity.apache.org/)
 From: 'Apache Software Foundation' (http://www.apache.org)
   - commons-collections  commons-collections:commons-collections:jar:3.1
 
-  - XWork: Core (http://struts.apache.org/struts2/xwork-core) org.apache.struts.xwork:xwork-core:jar:2.2.3
+  - XWork: Core (http://struts.apache.org/struts2/xwork-core) org.apache.struts.xwork:xwork-core:jar:2.2.3.1
     License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 From: 'Apache Software Foundation' (http://www.apache.org/)
@@ -46,7 +46,7 @@ From: 'ObjectWeb' (http://www.objectweb.org/)
 
 From: 'OpenSymphony' (http://www.opensymphony.com)
   - OGNL - Object Graph Navigation Library (http://ognl.org) ognl:ognl:jar:3.0.1
-
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 From: 'Spring Framework' (http://www.springframework.org/)
   - Spring Framework (http://www.springframework.org) org.springframework:spring:jar:2.5.6

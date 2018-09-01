@@ -1,6 +1,6 @@
 <#--
 /*
- * $Id: text.ftl 720258 2008-11-24 19:05:16Z musachy $
+ * $Id: text.ftl 1164516 2011-09-02 12:54:49Z mcucchiara $
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -29,7 +29,7 @@
  maxlength="${parameters.maxlength?html}"<#rt/>
 </#if>
 <#if parameters.nameValue??>
- value="<@s.property value="parameters.nameValue"/>"<#rt/>
+ value="${parameters.nameValue?html}"<#rt/>
 </#if>
 <#if parameters.disabled?default(false)>
  disabled="disabled"<#rt/>
