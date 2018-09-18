@@ -19,6 +19,9 @@ if($_M['word']['metinfo']){
     $met_title.='-'.$_M['word']['metinfo'];
 }
 $met_file_version=str_replace('.','',$_M['config']['metcms_v']).$_M['config']['met_patch'];
+$is_lte_ie9=strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 9")!==false || strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 8")!==false;
+$basic_admin_css_name=$is_lte_ie9?"-lteie9-1":"";
+$basic_admin_css_filemtime = filemtime(PATH_WEB.'public/ui/v2/static/css/basic_admin'.$basic_admin_css_name.'.css');
 ?>
 <!DOCTYPE HTML>
 <html class="{$_M['html_class']}">
@@ -32,9 +35,23 @@ $met_file_version=str_replace('.','',$_M['config']['metcms_v']).$_M['config']['m
 <title>{$met_title}</title>
 <meta name="generator" content="MetInfo {$_M['config']['metcms_v']}" data-variable="{$_M['url']['site']}|{$_M['lang']}|{$_M['config']['met_skin_user']}||||" data-m_type="{$_M['config']['m_type']}">
 <link href="{$_M['url']['site']}favicon.ico" rel="shortcut icon" type="image/x-icon">
-<link href="{$_M['url']['site']}public/ui/v2/static/css/basic_admin.css?{$met_file_version}" rel='stylesheet' type='text/css'>
-<?php if(file_exists(PATH_OWN_FILE."templates/css/metinfo.css")){ ?>
-<link href="{$_M['url']['own_tem']}css/metinfo.css?{$met_file_version}" rel='stylesheet' type='text/css'>
+<?php
+if($is_lte_ie9){
+?>
+<link href="{$url.site}app/system/include/static2/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="{$url.site}app/system/include/static2/vendor/bootstrap/bootstrap-extend.min.css" rel="stylesheet" type="text/css">
+<link href="{$url.site}app/system/include/static2/assets/css/site.min.css" rel="stylesheet" type="text/css">
+<link href="{$url.site}public/ui/v2/static/css/basic_admin-lteie9-1.css?{$basic_admin_css_filemtime}" rel="stylesheet" type="text/css">
+<?php
+}else{
+?>
+<link href="{$_M['url']['site']}public/ui/v2/static/css/basic_admin.css?{$basic_admin_css_filemtime}" rel='stylesheet' type='text/css'>
+<?php
+}
+if(file_exists(PATH_OWN_FILE.'templates/css/metinfo.css')){
+    $own_metinfo_css_filemtime = filemtime(PATH_OWN_FILE.'templates/css/metinfo.css');
+?>
+<link href="{$_M['url']['own_tem']}css/metinfo.css?{$own_metinfo_css_filemtime}" rel='stylesheet' type='text/css'>
 <?php } ?>
 <!--['if lte IE 9']>
 <script src="{$_M['url']['site']}public/ui/v2/static/js/lteie9.js"></script>
@@ -42,7 +59,7 @@ $met_file_version=str_replace('.','',$_M['config']['metcms_v']).$_M['config']['m
 </head>
 <!--['if lte IE 8']>
 <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
-    <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+    <button type="button" class="close" data-dismiss="alert">
         <span aria-hidden="true">×</span>
     </button>
     {$_M['word']['browserupdatetips']}
@@ -50,11 +67,11 @@ $met_file_version=str_replace('.','',$_M['config']['metcms_v']).$_M['config']['m
 <!['endif']-->
 <body class="{$_M['body_class']}">
 <?php
-if(!$head_no){
+if(!$head_no && !$_M['head_no']){
     $privilege = background_privilege();
     if(!$_M['form']['pageset']){
         $met_agents_metmsg=$_M['config']['met_agents_metmsg']?'':'hidden';
-        $msecount = DB::counter($_M['table']['infoprompt'], "WHERE lang='".$_M['lang']."' and see_ok='0'", "*");
+        $msecount = DB::counter($_M['table']['infoprompt'], "WHERE (lang='".$_M['lang']."' or lang='metinfo') and see_ok='0'", "*");
         $navigation=$privilege['navigation'];
         $arrlanguage=explode('|', $navigation);
         if(in_array('metinfo',$arrlanguage) || in_array('1002',$arrlanguage)){
@@ -140,7 +157,7 @@ if(!$head_no){
                     </a>
                 </div>
                 <div class="btn-group" {$met_agents_metmsg}>
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                         <i class="fa fa-bookmark"></i>
                         <span class="hidden-sm-down">{$_M['word']['indexcode']}</span>
                     </button>
@@ -171,11 +188,11 @@ if(!$head_no){
                     </ul>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                         <i class="fa fa-globe"></i>
                         <span class="hidden-sm-down">{$lang_name}</span>
                     </button>
-                    <ul class="dropdown-menu animate animate-reverse dropdown-menu-right" role="menu">
+                    <ul class="dropdown-menu animate animate-reverse dropdown-menu-right">
                         <?php
                         foreach($_M['user']['langok'] as $key=>$val){
                         	$url_now ='http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
@@ -204,10 +221,10 @@ if(!$head_no){
                 </div>
                 <?php } ?>
                 <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="adminuser" data-toggle="dropdown" aria-expanded="true">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="adminuser" data-toggle="dropdown">
                         {$_M['user']['admin_name']}
                     </button>
-                    <ul class="dropdown-menu animate animate-reverse dropdown-menu-right" role="menu" aria-labelledby="adminuser">
+                    <ul class="dropdown-menu animate animate-reverse dropdown-menu-right">
                         <li class="dropdown-item"><a href="{$_M['url']['adminurl']}n=admin&c=admin_admin&a=doeditor_info">{$_M['word']['modify_information']}</a></li>
                         <li class="dropdown-item"><a target="_top" href="{$_M['url']['adminurl']}n=login&c=login&a=dologinout">{$_M['word']['indexloginout']}</a></li>
                     </ul>
@@ -216,11 +233,11 @@ if(!$head_no){
         </div>
     </div>
 </header>
-<div class="modal fade" id="functionEncy" tabindex="-1" role="dialog" aria-labelledby="functionEncy">
-    <div class="modal-dialog modal-lg modal-primary" role="document">
+<div class="modal fade" id="functionEncy">
+    <div class="modal-dialog modal-lg modal-primary">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title">{$_M['word']['funcCollection']}</h4>

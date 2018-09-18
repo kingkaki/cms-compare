@@ -196,7 +196,7 @@ define(function(require, exports, module) {
 				dataType : "json",
 				success:function(message) {
 		        	if(message.status){
-		        		window.parent.metalert();
+		        		window.parent.metAlert();
 		    			$('.page-iframe',parent.document).prop('contentWindow').location.reload();
 		    			setTimeout(function(){
 							$('.nav-modal .close',parent.document).click();

@@ -3,6 +3,7 @@
 # Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
 defined('IN_MET') or exit('No permission');
 $data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
+$set_user_head=str_replace($_M['url']['site'], '../', $_M['user']['head']);
 ?>
 <include file="sys_web/head"/>
 <div class="page bg-pagebg1 met-member member-profile">
@@ -65,12 +66,12 @@ $data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
 								<div class="form-group met-upfile">
 									<div class="row">
 										<div class="col-md-3"></div>
-										<div class="col-sm-6 col-md-4 row form-group">
-											<input type="file" name="head" value="{$_M['user']['head']}" data-url="{$_M['url']['site']}app/system/entrance.php?lang={$_M['lang']}&c=uploadify&m=include&a=dohead" data-messages-error='{$_M['word']['opfail']}' data-default-file="{$_M['user']['head']}" accept='image/*' hidden/>
+										<div class="col-md-6 form-group">
+											<input type="file" name="head" value="{$set_user_head}" data-plugin='fileinput' data-url="{$_M['url']['site']}app/system/entrance.php?lang={$_M['lang']}&c=uploadify&m=include&a=dohead" accept='image/*' hidden/>
 										</div>
 									</div>
 								</div>
-								<?php if(count($_M['paralist'])) $_M['paraclass']->parawebtem($_M['user']['id'],10); ?>
+								<?php if(count($_M['paralist'])){$_M['paraclass']->parawebtem($_M['user']['id'],10);} ?>
 								<div class="form-group m-b-0">
 									<div class="row">
 										<div class="col-md-3"></div>

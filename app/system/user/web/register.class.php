@@ -64,10 +64,6 @@ class register extends userweb {
 				}
 			break;
 			case 3:
-                $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
-                if(!$pinok && $_M['config']['met_memberlogin_code'] ){
-                    okinfo(-1, $_M['word']['membercode']);
-                }
 				$session = load::sys_class('session', 'new');
 				if($_M['form']['phonecode']!=$session->get("phonecode")){
 					okinfo(-1, $_M['word']['phonecodeerror']);

@@ -21,7 +21,7 @@ define(function(require, exports, module) {
 		    return false;
 		}
 		// 渲染应用列表
-		datatable_option['drawCallback']=function(settings){
+		$(document).on( 'draw.dt', function ( e,settings ) {
 			var json=table.ajax.json(),
 				html='';
 			$.each(json.data, function(index, val) {
@@ -46,7 +46,7 @@ define(function(require, exports, module) {
 			});
 			if(!html) html='<div class="text-center">'+settings.oLanguage.sEmptyTable+'</div>';
 			$('.hotapplist').html(html);
-		}
+		});
 	}
 	//common.remodal();
 	$(document).on('click',".buybutton",function(){

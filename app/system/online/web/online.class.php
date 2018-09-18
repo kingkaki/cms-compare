@@ -36,9 +36,11 @@ class online extends web
                         <div class='onlinebox-open' id='onlinebox-open' style='background:{$_M['config']['met_online_color']};'><i class='fa fa-comments-o'></i></div>
                         <div class='onlinebox-box'>
                             <div class='onlinebox-top' style='background:{$_M['config']['met_online_color']};'>
-                                <span class='editable-click' met-id='{$online_word['id']}' met-table='language' met-field='value'>{$online_word['value']}</span>
-                                <a href='javascript:;' class='onlinebox-close' title='{$lang_Close}' onclick='return onlineclose();'>x</a>
-                                <a href='javascript:;' class='onlinebox-min' onclick='return onlinemin();'>-</a>
+                                <div class='onlinebox-top-btn'>
+                                    <a href='javascript:;' class='onlinebox-close' title='{$lang_Close}' onclick='return onlineclose();'>x</a>
+                                    <a href='javascript:;' class='onlinebox-min' onclick='return onlinemin();'>-</a>
+                                </div>
+                                <h4 class='editable-click' met-id='{$online_word['id']}' met-table='language' met-field='value'>{$online_word['value']}</h4>
                             </div>
                             <div class='onlinebox-center list-group'>";
             //online content
@@ -69,7 +71,7 @@ class online extends web
                 }
                 if ($val['skype'] != '') {
                     if($_M['config']['met_onlinenameok']) $val['show_name']=$val['skype'];
-                    $metinfo .= "<p class='met_skype list-group-item-text'><a href='callto://{$val['skype']}><i class='fa fa-skype'></i><span>{$val['show_name']}</span></a></p>";
+                    $metinfo .= "<p class='met_skype list-group-item-text'><a href='callto://{$val['skype']}'><i class='fa fa-skype'></i><span>{$val['show_name']}</span></a></p>";
                 }
                 $metinfo .= '</li>';
             }
@@ -85,22 +87,22 @@ class online extends web
             if (file_exists($tmpincfile)) require_once $tmpincfile;
 
             if ($metinfover == 'v1') $metinfo .= '<script>
-    		function onlinemin(){
-    			$("#onlinebox").addClass("min");
-    			return false;
-    		}
-    		$(document).on("click",".onlinebox-open",function(){
+            function onlinemin(){
+                $("#onlinebox").addClass("min");
+                return false;
+            }
+            $(document).on("click",".onlinebox-open",function(){
                 $("#onlinebox").removeClass("min");
             })
-    		$(function() {
-            	setTimeout(function(){
+            $(function() {
+                setTimeout(function(){
                     var online_type="'.$_M['config']['met_online_type'].'";
-            		if(document.documentElement.clientWidth<768) $("#onlinebox").addClass("min");
+                    if(document.documentElement.clientWidth<768) $("#onlinebox").addClass("min");
                     if(online_type==3 || online_type==1) document.getElementById("onlinebox-open").style.float = "left";
                     if(online_type==1 || online_type==2) document.getElementById("onlinebox").style.position = "absolute";
-            	},0)
+                },0)
             });
-    		</script>';
+            </script>';
             if ($metinfover == 'v1' || $metinfover == 'v2') {// 增加$metinfover判断值（新模板框架v2）
                 //处理回传数据(sea.js处理方式)
                 $onlinex = $_M['config']['met_online_x'] ? $_M['config']['met_online_x'] : "10";

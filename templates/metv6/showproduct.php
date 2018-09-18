@@ -27,7 +27,7 @@
                         <if value="$data['description']">
                         <p class='description'>{$data.description}</p>
                         </if>
-                        <ul class="product-para paralist blocks-100 blocks-sm-2 blocks-md-3 blocks-lg-2">
+                        <ul class="product-para paralist blocks-100 blocks-sm-2 blocks-md-3 blocks-lg-2 p-y-5">
                             <list data="$data['para']" name="$s" num='100'>
                             <li>
                                 <span>{$s.name}：</span>
@@ -55,7 +55,7 @@
                 <div class="col-lg-9 pull-lg-right">
                     <div class="row">
                         <div class="panel panel-body m-b-0 product-detail" boxmh-mh>
-                            <ul class="nav nav-tabs nav-tabs-line m-b-20 met-showproduct-navtabs">
+                            <ul class="nav nav-tabs nav-tabs-line met-showproduct-navtabs">
                                 <list data="$data['contents']" name="$s">
                                 <li class="nav-item">
                                     <a

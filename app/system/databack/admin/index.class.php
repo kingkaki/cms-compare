@@ -146,9 +146,8 @@ class index extends admin {
             header("location:{$_M[url][own_form]}a=dosql_execute&anyid={$_M['form']['anyid']}&pre={$_M['form']['pre']}&dosubmit={$_M['form']['dosubmit']}&dosubmit1={$_M['form']['dosubmit1']}&fileid={$fileid}&version={$version}&old_version={$_M['form']['old_version']}");
         } else {
             //恢复栏目文件
-            $this->dorecover_column();
-            //剔除不存在的applist记录
-            $this->docheckapplsit();
+
+
             //清除官方商城登录信息
             $this->metshot_logout();
             load::sys_func('file');
@@ -161,10 +160,17 @@ class index extends admin {
 
             DB::query($query);
 			$update_database->recovery_data();
+
+			//剔除不存在的applist记录
+            $this->docheckapplsit();
+
             if($version != $old_version){
-            	$update_database->update_language();
-            	$update_database->insert_para();
-            	$update_database->update_plist();
+            	if(version_compare($old_version, '6.1.0') < 0){
+            		$update_database->update_language();
+	            	$update_database->insert_para();
+	            	$update_database->update_plist();
+            	}
+
             	if(version_compare($version, '6.1.0') === 0  && version_compare($old_version, '6.0.0') < 0){
 
         			$query = "SELECT * FROM {$_M['table']['list']}";
@@ -178,13 +184,14 @@ class index extends admin {
         					$query = "INSERT INTO {$_M['table']['para']} SET pid = {$l['bigid']},module={$parameter['module']},value='{$l['info']}',lang='{$l['lang']}'";
 							$row = DB::query($query);
         				}
-
         			}
             	}
 
             	$update_database->update_shop();
-
             }
+
+            $update_database->check_shop();
+            $this->dorecover_column();
             deldir('cache', 1);
             turnover("{$_M[url][own_form]}a=doindex", "{$_M[word][setdbImportOK]}");
         }
@@ -744,31 +751,19 @@ class index extends admin {
     public function docheckapplsit(){
         global $_M;
 
-        $query = "SELECT `m_name` FROM {$_M['table'][applist]}";
+        $query = "SELECT `m_name`,no FROM {$_M['table'][applist]}";
         $applist = DB::get_all($query);
-        #dump($applist);
-
-        $file = scandir(PATH_WEB.'app/app');
-        $appdir = array();
-        $no_include = array('.', '..');
-
-        if(file_exists(PATH_SYS . 'pay')){
-            //支付接口
-            $appdir[] = 'pay';
-        }
-        foreach ($file as $val) {
-            if(!in_array($val,$no_include)){
-                if (is_dir(PATH_WEB . "app/app/" . $val)) {
-                    $appdir[] = $val;
-                }
-            }
-        }
 
         foreach ($applist as $app) {
-            if(!in_array($app['m_name'],$appdir)){
-                $query = "DELETE FROM {$_M['table']['applist']} WHERE `m_name`= '{$app['m_name']}'";
-                DB::query($query);
-            }
+        	if($app['no'] == 10080){
+        		if(is_dir(PATH_SYS . 'pay')){
+        			continue;
+        		}
+        	}
+        	if(!is_dir(PATH_WEB.'app/app/'.$app['m_name'])){
+        		$query = "DELETE FROM {$_M['table']['applist']} WHERE `m_name`= '{$app['m_name']}'";
+        		DB::query($query);
+        	}
         }
     }
 

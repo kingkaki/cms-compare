@@ -91,8 +91,6 @@ define(function(require, exports, module) {
 			                            $self.find('[data-original]').lazyload();
 			                        });
 			                    }
-			                    // 自定义的表格重绘回调函数
-			                    if(typeof datatable_option!='undefined' && typeof datatable_option['drawCallback']!='undefined') datatable_option['drawCallback'](settings);
 					        },
 					        rowCallback: function(row,data){// 行class
 								if (data.toclass) $(row).addClass(data.toclass);
@@ -102,7 +100,6 @@ define(function(require, exports, module) {
 					if(typeof datatable_option!='undefined'){
 						if(typeof datatable_option['dataSrc']!='undefined') option.ajax.dataSrc=datatable_option['dataSrc']; // 自定义的表格返回数据处理
 			            if(typeof datatable_option['columns']!='undefined') option.columns=datatable_option['columns']; // 自定义表格单元格对应的数据名称
-			            if(typeof datatable_option['preDrawCallback']!='undefined') option.preDrawCallback=datatable_option['preDrawCallback'];// 自定义表格重绘前的处理函数
 		            }
 		            return option;
 	            };

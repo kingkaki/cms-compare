@@ -50,7 +50,8 @@
 .metadmin-fmbx dl .checkbox-custom{margin-top:0;margin-bottom:0;padding-top:.429rem;padding-bottom:.429rem}
 .metadmin-fmbx dl .radio-inline{padding-top: 5px;}
 @media (max-width:767px){
-    .metadmin-fmbx dl dt{width:100px}
+    .metadmin-fmbx dl dt{width:30%;min-width: 100px;}
     .metadmin-fmbx dl .form-control,
-    .metadmin-fmbx dl .input-group{width:100%;margin-right:0 !important}
+    .metadmin-fmbx dl .input-group,
+    .metadmin-fmbx dl .minicolors{width:100%;margin-right:0 !important}
 }

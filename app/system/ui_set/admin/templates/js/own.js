@@ -40,7 +40,7 @@ define(function(require, exports, module) {
 				dataType : "json",
 				success:function(message) {
 		        	if(parseInt(message.status)){
-		        		window.parent.metalert();
+		        		window.parent.metAlert();
 		    			$('.page-iframe',parent.document).prop('contentWindow').location.reload();
 		    			var modal_name='blockset';
 		    			if($(".set-block").hasClass('set-img')) modal_name='img';
@@ -70,7 +70,7 @@ define(function(require, exports, module) {
 				data: {applist: applist},
 				success:function(message) {
 		        	if(parseInt(message.status)){
-		        		window.parent.metalert();
+		        		window.parent.metAlert();
 		    			setTimeout(function(){
 							window.parent.location.reload();
 						},500)

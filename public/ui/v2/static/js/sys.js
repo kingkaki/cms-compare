@@ -3,32 +3,32 @@
  */
 $(function() {
     // 访问统计
-    if (M["module"] && M['id']) {
-        switch (M["module"]) {
-            case 2:
-                M['module_name'] = "news";
-                break;
-            case 3:
-                M['module_name'] = "product";
-                break;
-            case 4:
-                M['module_name'] = "download";
-                break;
-            case 5:
-                M['module_name'] = "img";
-                break
-        }
-        if (typeof M['module_name'] != 'undefined') {
-            $.ajax({
-                type: "POST",
-                dataType: 'text',
-                url: M['weburl'] + 'hits?lang='+M['lang']+'&type=' + M['module_name'] + '&id=' + M['id'] + '&metinfover=v2',
-                success: function(data) {
-                    $('#met-hits').html(data).removeAttr('hidden');
-                }
-            })
-        }
-    }
+    // if (M["module"] && M['id']) {
+    //     switch (M["module"]) {
+    //         case 2:
+    //             M['module_name'] = "news";
+    //             break;
+    //         case 3:
+    //             M['module_name'] = "product";
+    //             break;
+    //         case 4:
+    //             M['module_name'] = "download";
+    //             break;
+    //         case 5:
+    //             M['module_name'] = "img";
+    //             break
+    //     }
+    //     if (typeof M['module_name'] != 'undefined') {
+    //         $.ajax({
+    //             type: "GET",
+    //             dataType: 'text',
+    //             url: M['weburl'] + 'hits?lang='+M['lang']+'&type=' + M['module_name'] + '&id=' + M['id'] + '&metinfover=v2',
+    //             success: function(data) {
+    //                 $('#met-hits').html(data).removeAttr('hidden');
+    //             }
+    //         })
+    //     }
+    // }
     // 在线客服
     $.ajax({
         type: "POST",

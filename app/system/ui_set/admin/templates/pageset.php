@@ -1,6 +1,5 @@
 <!--<?php defined('IN_MET') or exit('No permission');
 require_once $this->template('own/static/config');
-$lang_json_admin_file_ok=1;
 $pageset_iframe_src=$_COOKIE['page_iframe_url']?$_COOKIE['page_iframe_url']:"{$_M['url']['site']}index.php?lang={$_M['lang']}";
 if(strpos($pageset_iframe_src, 'pageset=1')===false){
 	if(strpos($pageset_iframe_src, '?')!==false){
@@ -9,31 +8,23 @@ if(strpos($pageset_iframe_src, 'pageset=1')===false){
 		$pageset_iframe_src.='?pageset=1';
 	}
 }
-if($lang_json_admin_file_ok){
-	$msecount = $msecount = DB::counter($_M['table']['infoprompt'], " WHERE (lang='{$_M['lang']}' or lang='metinfo') and see_ok='0'", "*");
-	if($_M['config']['met_agents_metmsg']){
-		$met_agents_metmsg = '';
-	}else{
-		$met_agents_metmsg = 'style="display:none;"';
-	}
-	if($_M['config']['met_agents_app']){
-		$met_agents_app = '';
-	}else{
-		$met_agents_app = 'style="display:none;"';
-	}
-	$query = "SELECT * FROM {$_M['table']['admin_column']} WHERE name='lang_checkupdate'";
-	$check_update = DB::get_one($query);
-	if($check_update['type'] == 2){
-		$met_checkupdate = '';
-	}else{
-		$met_checkupdate = 'style="display:none;"';
-	}
+$msecount = $msecount = DB::counter($_M['table']['infoprompt'], " WHERE (lang='{$_M['lang']}' or lang='metinfo') and see_ok='0'", "*");
+if($_M['config']['met_agents_metmsg']){
+	$met_agents_metmsg = '';
 }else{
-echo <<<EOT
--->
-<meta http-equiv='refresh' content='0'/>
-<!--
-EOT;
+	$met_agents_metmsg = 'style="display:none;"';
+}
+if($_M['config']['met_agents_app']){
+	$met_agents_app = '';
+}else{
+	$met_agents_app = 'style="display:none;"';
+}
+$query = "SELECT * FROM {$_M['table']['admin_column']} WHERE name='lang_checkupdate'";
+$check_update = DB::get_one($query);
+if($check_update['type'] == 2){
+	$met_checkupdate = '';
+}else{
+	$met_checkupdate = 'style="display:none;"';
 }
 echo <<<EOT
 --><!DOCTYPE HTML>
@@ -50,21 +41,22 @@ echo <<<EOT
 <link href="{$_M['url']['site']}favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <!--
 EOT;
-if($lang_json_admin_file_ok){
-	foreach ($resui['css'] as $value) {
+foreach ($resui['css'] as $key=> $value) {
+	if(!$key){
 echo <<<EOT
 -->
 <link rel='stylesheet' type='text/css' href="{$value}">
 <!--
 EOT;
 	}
-	if($resui_lteie9){
+}
+if($resui_lteie9){
 echo <<<EOT
 -->
 <script src="{$resui_lteie9['js'][0]}"></script>
 <!--
 EOT;
-	}
+}
 echo <<<EOT
 -->
 </head>
@@ -81,7 +73,7 @@ echo <<<EOT
 	<div class="container-fluid">
 <!--
 EOT;
-	if($_M['config']['met_agents_pageset_logo']==1 || !isset($_M['config']['met_agents_pageset_logo'])){
+if($_M['config']['met_agents_pageset_logo']==1 || !isset($_M['config']['met_agents_pageset_logo'])){
 echo <<<EOT
 -->
 
@@ -90,7 +82,7 @@ echo <<<EOT
 		</div>
 <!--
 EOT;
-	}
+}
 echo <<<EOT
 -->
 		<div class="container">
@@ -134,13 +126,13 @@ echo <<<EOT
 	                                <a href="{$_M['url']['own_form']}n=ui_set&c=index&a=doclear_cache" class='dropdown-item clear-cache' title='{$_M['word']['clearCache']}'>{$_M['word']['clearCache']}</a>
 <!--
 EOT;
-	foreach ($applist as $key => $value) {
+foreach ($applist as $key => $value) {
 echo <<<EOT
 -->
 									<a href="javascript:;" class='dropdown-item' data-url='{$value['url']}' title='{$value['appname']}'>{$value['appname']}</a>
 <!--
 EOT;
-	}
+}
 echo <<<EOT
 -->
 								</ul>
@@ -166,14 +158,14 @@ echo <<<EOT
 										<a href="javascript:;" class='dropdown-item' data-url="{$_M['url']['adminurl']}anyid=47&n=admin&c=admin_admin&a=doindex" title='{$_M['word']['indexadminname']}'>{$_M['word']['indexadminname']}</a>
 <!--
 EOT;
-	$power = admin_information();
-	if($power['admin_group'] == '10000' || $power['admin_group'] == '3'){
+$power = admin_information();
+if($power['admin_group'] == '10000' || $power['admin_group'] == '3'){
 echo <<<EOT
 -->
 										<a href="javascript:;" class='dropdown-item' title='{$_M['word']['funcCollection']}' data-toggle="modal" data-target=".functionEncy-modal" {$met_agents_metmsg}>{$_M['word']['funcCollection']}</a>
 <!--
 EOT;
-	}
+}
 echo <<<EOT
 -->
 									</ul>
@@ -181,7 +173,7 @@ echo <<<EOT
 								<a href='{$_M['url']['site_admin']}index.php?lang={$_M['lang']}' class="btn btn-dark btn-outline m-l-10 white" target='_blank'>{$_M['word']['oldBackstage']}</a>
 <!--
 EOT;
-	if(!$_M['config']['met_agents_switch']){
+if(!$_M['config']['met_agents_switch']){
 echo <<<EOT
 -->
     <a href='javascript:;' class="btn btn-dark btn-outline m-l-10 white" data-url='{$_M['url']['adminurl']}n=system&c=news&a=doindex' title='{$_M['word']['sysMessage']}'>
@@ -190,7 +182,7 @@ echo <<<EOT
 								</a>
 <!--
 EOT;
-	}
+}
 echo <<<EOT
 -->
 								<div class="btn-group m-l-10">
@@ -210,7 +202,7 @@ echo <<<EOT
 </header>
 <!--
 EOT;
-	if($adflag){
+if($adflag){
 echo <<<EOT
 -->
 <div class="text-xs-center m-b-0 bg-blue-grey-100 alert pageset-tips">
@@ -225,16 +217,10 @@ echo <<<EOT
 </div>
 <!--
 EOT;
-	}
 }
 echo <<<EOT
 -->
 <iframe src="{$pageset_iframe_src}" class='page-iframe' frameborder="0" width="100%"></iframe>
-<!--
-EOT;
-if($lang_json_admin_file_ok){
-echo <<<EOT
--->
 <div class="modal fade modal-primary blockset-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content h-100p">
@@ -387,11 +373,6 @@ echo <<<EOT
         </button>
     </li>
 </menu>
-<!--
-EOT;
-}
-echo <<<EOT
--->
 <script>
 var basepath='{$_M['url']['site_admin']}';
 </script>

@@ -1173,25 +1173,31 @@ self::add_admin_language('cancel', 'cancel', 1, 0, 1, 0, $lang);
             $pay_update = load::mod_class('update/admin/updatepay','new');
             $pay_update->update();
 
-            if(!file_exists(PATH_WEB.'shop')){
-                $query = "DELETE FROM {$_M['table']['applist']} WHERE no = '10043'";
-                DB::query($query);
+            self::check_shop();
+        }
+    }
 
-                $query = "UPDATE {$_M['table']['app_config']} SET value = '0' WHERE name = 'shopv2_open'";
-                DB::query($query);
+    public function check_shop()
+    {
+        global $_M;
+        if(!file_exists(PATH_WEB.'shop')){
+            $query = "DELETE FROM {$_M['table']['applist']} WHERE no = '10043'";
+            DB::query($query);
 
-                $query = "UPDATE {$_M['table']['app_config']} SET value = 0 WHERE name = 'shopv2_para'";
-                DB::query($query);
-            }
+            $query = "DELETE FROM {$_M['table']['app_config']} WHERE appno = 10043";
+            DB::query($query);
 
-            if(!file_exists(PATH_WEB.'pay')){
-                $query = "DELETE FROM {$_M['table']['applist']} WHERE no = '10080'";
-                DB::query($query);
-                $query = "UPDATE {$_M['table']['app_config']} SET value = '0' WHERE name = 'payment_open'";
-                DB::query($query);
-                $query = "UPDATE {$_M['table']['pay_config']} SET value = '0' WHERE name = 'payment_open'";
-                DB::query($query);
-            }
+            $query = "DELETE FROM {$_M['table']['app_plugin']} WHERE no = 10043";
+            DB::query($query);
+        }
+
+        if(!file_exists(PATH_WEB.'pay')){
+            $query = "DELETE FROM {$_M['table']['applist']} WHERE no = 10080";
+            DB::query($query);
+            $query = "DELETE FROM {$_M['table']['app_config']} WHERE appno = 10080";
+            DB::query($query);
+            $query = "DELETE FROM {$_M['table']['pay_config']}";
+            DB::query($query);
         }
     }
 

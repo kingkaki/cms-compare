@@ -120,7 +120,7 @@ class news_database extends base_database {
 				}
 
 				//商城規格 价格
-                if ($type['specv']['status'] && $type['specv']['info'] && $_M['config']['shopv2_open'] || ($_M['form']['price_low'] || $_M['form']['price_top'] )) {
+                if ($type['specv']['status'] && $type['specv']['info'] && $_M['config']['shopv2_open'] && $_M['config']['shopv2_para'] ||  ($_M['form']['price_low'] || $_M['form']['price_top'] )) {
                     $specv_sql = load::app_class("shop/include/class/shop_search","new")->get_search_list_by_specv_sql($type['specv']['info']);
 
 					$serach .= " OR id in ({$specv_sql}) ";//如果以后需要加强字段搜索，就在这里添加代码。

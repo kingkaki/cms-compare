@@ -62,16 +62,17 @@ class met_tag extends tag {
         <?php
             \$sub = count($from);
             \$num = $num;
+
+
             if(!is_array($from)){
                 $from = explode('|',$from);
             }
+
             foreach ($from as \$index => \$val) {
                 if(\$index >= \$num){
                     break;
                 }
-                if(\$sub <=0){
-                    continue;
-                }
+
                 if(is_array(\$val)){
                     \$val['_index'] = \$index;
                     \$val['_first'] = \$index == 0 ? true : false;

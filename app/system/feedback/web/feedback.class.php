@@ -30,7 +30,7 @@ class feedback extends web {
           unset($data['id']);
           $this->seo($data['name'], $data['keywords'], $data['description']);
           $this->seo_title($data['ctitle']);
-          $this->seo_title($_M['config']['met_fdtable']);
+          // $this->seo_title($_M['config']['met_fdtable']);
 		  $this->add_input('fdtitle',$data['name']);
 		  require_once $this->template('tem/feedback');
 		}

@@ -195,7 +195,8 @@ class common {
 	  */
 	protected function load_url() {
 		global $_M;
-
+		//来源页面
+		define('HTTP_REFERER', sqlinsert($_SERVER['HTTP_REFERER']));
 		$this->load_url_other();
 		$this->load_url_unique();
 	}
@@ -215,7 +216,7 @@ class common {
 				$_M['config']['met_weburl'] = $http . HTTP_HOST.preg_replace("/\w+\/\w+\/\w+\.php$/",'',PHP_SELF);
 			}else{
 				if(M_NAME=="index"){
-					$_M['config']['met_weburl'] = str_replace('/index.php','',$http . HTTP_HOST . PHP_SELF.'/');
+					$_M['config']['met_weburl'] = str_ireplace('/index.php','',$http . HTTP_HOST . PHP_SELF.'/');
 				}else{
 					$_M['config']['met_weburl'] = $http . HTTP_HOST.preg_replace("/[0-9A-Za-z-_]+\/\w+\.php$/",'',PHP_SELF);
 
@@ -313,23 +314,21 @@ class common {
                 $_M['word'][$value['name']] = trim($value['value']);
             }
         }
-
-
         //生成js语言文件  app或者array字段为1则为js语言
         $langtype = $site ? 'admin_' : '';
         $js_lang_cache = PATH_CACHE.'lang_json_'.$langtype.$lang.'.js';
         if(!file_exists($js_lang_cache)){
+
             $query = "SELECT * FROM {$_M['table']['language']} WHERE lang='{$lang}' AND (app=1 OR array=1) AND site='{$site}'";
-            $result = DB::get_all($query);
-            foreach ($result as $listlang) {
-            	$_M['jsword'][$listlang['name']] = trim($listlang['value']);
-            }
-            $jslang = 'window.METLANG = ';
-            $jslang .= jsonencode($_M['jsword'] );
-            if (!$_M[form][pageset]) {
-                file_put_contents($js_lang_cache, $jslang);
+
+            $result = DB::query($query);
+            while ($listlang = DB::fetch_array($result)) {
+                $_M['jsword'][$listlang['name']] = trim($listlang['value']);
             }
 
+	        $jslang = 'window.METLANG = ';
+            $jslang .= jsonencode($_M['jsword']);
+            file_put_contents($js_lang_cache, $jslang);
         }
 	}
 

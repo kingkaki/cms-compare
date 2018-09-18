@@ -3,15 +3,12 @@
 # Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
 
 //版本号
-define ('SYS_VER', 'beta 1.101');
-define ('SYS_VER_TIME', '20150511');
+define ('SYS_VER', '6.1.1');
+define ('SYS_VER_TIME', '20180829');
 
 header("Content-type: text/html;charset=utf-8");
-
 error_reporting(E_ERROR | E_PARSE | E_CORE_ERROR |E_COMPILE_ERROR | E_USER_ERROR );
-//error_reporting(E_ALL);
 PHP_VERSION >= '5.1' && date_default_timezone_set('Asia/Shanghai');
-
 @set_time_limit(0);
 
 define('IN_MET', true);
@@ -74,8 +71,7 @@ define ('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
 
 //当前访问的主机名
 define ('HTTP_HOST', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME']);
-//来源页面
-define('HTTP_REFERER', $_SERVER['HTTP_REFERER']);
+
 //来源页面
 define('REQUEST_URI', $_SERVER['REQUEST_URI']);
 

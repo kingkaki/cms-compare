@@ -66,7 +66,7 @@ class image{
 	public function met_thumb($image_path, $x = '', $y = '', $return=0){
 
 		global $_M;
-		$this->default = 'public/images/metinfo.gif';
+		$this->default = $_M['config']['met_agents_img'];
 		if($return){
 			$this->default = '';
 		}

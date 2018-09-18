@@ -24,6 +24,7 @@ M['classnow']=MSTR[5]==''?MSTR[5]:parseInt(MSTR[5]);
 M['id']=MSTR[6]==''?MSTR[6]:parseInt(MSTR[6]);
 M['metinfo_version']=$('meta[name="generator"]').length?$('meta[name="generator"]').attr('content').replace('MetInfo ','').replace(/\./g,''):'metinfo';
 M['user_name']=$('meta[name="generator"]').data('user_name')||'';
+M['time']=new Date().getTime();
 // 客户端判断
 M['useragent']=navigator.userAgent;
 M['useragent_tlc']=M['useragent'].toLowerCase();
@@ -95,7 +96,7 @@ $.extend({
         if(includeFileIndex>=num_start && includeFileIndex<num_end){
             if(ext[0]=='js'){
                 var filesi=document.createElement('script'),
-                    src=name+'?'+M['metinfo_version'];
+                    src=name/*+'?'+M['metinfo_version']*/;
                 filesi.src=src;
                 filesi.type="text/javascript",
                 file_index=$.inArray(name,includeFile);
@@ -121,7 +122,7 @@ $.extend({
                 }
             }else if(ext[0]=='css'){
                 var filesi=document.createElement('link'),
-                    href=name+'?'+M['metinfo_version'];
+                    href=name/*+'?'+M['metinfo_version']*/;
                 filesi.href=href;
                 filesi.type='text/css';
                 filesi.rel="stylesheet";
@@ -166,11 +167,36 @@ $.cachedScript = function(url, options) {
         }
     }
     // 这里是jquery官方提供类似getScript实现的方法，也就是说getScript其实也就是对ajax方法的一个拓展
-    options = $.extend(options || {}, {
+    options = $.extend({
         dataType: "script",
         url: url,
         cache: true // 其实现在这缓存加与不加没多大区别
-    });
+    },options);
     scriptsArray.push(url); // 将url地址放入script标记数组中
     return $.ajax(options);
 };
+// 判断是否加载了文件后回调
+function metFileLoadFun(file,condition,fun,noload_fun){
+    if(condition()){
+        if(typeof fun=='function') fun();
+    }else{
+        // if($('script[src*="js/basic.js"]').length){
+        //     var load_time=0;
+        //         intervals=setInterval(function(){
+        //             load_time+=50;
+        //             if(condition()){
+        //                 if(typeof fun=='function') fun();
+        //                 clearInterval(intervals);
+        //             }else if(load_time>=7000){
+        //                 console.log(condition+'没有加载');
+        //                 if(typeof noload_fun=='function') noload_fun();
+        //                 clearInterval(intervals);
+        //             }
+        //         },50)
+        // }else{
+            $.include(file,function(){
+                if(typeof fun=='function') fun();
+            })
+        // }
+    }
+}

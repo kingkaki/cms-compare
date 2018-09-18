@@ -2,8 +2,11 @@
 defined('IN_MET') or exit('No permission');
 ?>
 <met_meta />
-<?php if(file_exists(PATH_OWN_FILE."templates/met/css/metinfo.css")){ ?>
-<link href="{$_M['url']['own_tem']}css/metinfo.css?{$met_file_version}" rel='stylesheet' type='text/css'>
+<?php
+if(file_exists(PATH_OWN_FILE."templates/met/css/metinfo.css")){
+    $own_metinfo_css_filemtime = filemtime(PATH_OWN_FILE.'templates/met/css/metinfo.css');
+?>
+<link href="{$_M['url']['own_tem']}css/metinfo.css?{$own_metinfo_css_filemtime}" rel='stylesheet' type='text/css'>
 <?php } ?>
 <header>
     <nav class="navbar navbar-default met-nav">

@@ -10,16 +10,21 @@ class product_admin extends news_admin {
 	public $paraclass;
 	public $moduleclass;
 	public $shop;
+	public $shop_exists;
 	public $module;
 	function __construct() {
 		global $_M;
 		parent::__construct();
 		$this->moduleclass = load::mod_class('content/class/sys_product', 'new');
 		//
-		//$this->shop = load::app_class('shop/admin/class/sys_goods', 'new');
-
-		if($_M['config']['shopv2_open']) $this->specification_admin=load::app_class('shop/admin/specification_admin', 'new');
-		if(!$this->shop = load::plugin('doproduct_plugin_class', '99')){
+        $this->shop_exists = false;
+        $shop_applist = DB::get_one("SELECT * FROM {$_M['table']['applist']} WHERE `no`='10043'");	//判断商城applist
+        $shop_appfile = file_exists(PATH_ALL_APP.'shop');									//商城文件
+        if($_M['config']['shopv2_open'] && $shop_applist && $shop_appfile) {
+            $this->specification_admin=load::app_class('shop/admin/specification_admin', 'new');
+            $this->shop_exists = 1;
+        }
+        if(!$this->shop = load::plugin('doproduct_plugin_class', '99')){
 			$this->shop = load::mod_class('content/class/sys_shop', 'new');
 		}
 		//$this->paraclass = load::mod_class('system/class/sys_para', 'new');
@@ -54,7 +59,7 @@ class product_admin extends news_admin {
 		$list = $this->shop->default_value($list);
 		$a = 'doaddsave';
 		$turnurl="&class1={$list['class1']}&class2={$list['class2']}&class3={$list['class3']}";
-        if($_M['config']['shopv2_open']){
+        if($this->shop_exists){
            	$list_s['paraku']=$this->specification_admin->dogetspeclist();
 			$list_s['speclist']=jsonencode($list_s['paraku']);
 			$list = array_merge($list, $list_s);
@@ -207,7 +212,7 @@ class product_admin extends news_admin {
 		$list['issue'] = $list['issue'] ? $list['issue'] : get_met_cookie('metinfo_admin_name');
 		//$list[description]=str_replace('&nbsp;','',$list[description]);
 		//$list[description]=str_replace(' ','',$list[description]);
-		if($_M['config']['shopv2_open']){
+		if($this->shop_exists){
 			$list_s = $this->shop->default_value($list);
 			$list_s['paraku']=$this->specification_admin->dogetspeclist();
 			$list_s['speclist']=jsonencode($list_s['paraku']);

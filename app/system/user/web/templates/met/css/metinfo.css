@@ -42,8 +42,8 @@
 .met-member-index .basic .row:first-child,
 .met-member-index .para .form-group:first-child .row{border-top:none;}
 .met-member-index .met-form{max-width:none;background:none;padding:0px;margin:0px;}
-.met-member-index .met-form .met-upfile .file-input >*{display:none;}
-.met-member-index .met-form .met-upfile .file-input .btn-file{display:block;background:none;border:none;}
+/*.met-member-index .met-form .met-upfile .file-input >*{display:none;}
+.met-member-index .met-form .met-upfile .file-input .btn-file{display:block;background:none;border:none;}*/
 /*帐号安全*/
 .met-member-safety .media{padding:30px 0px;border-top:1px solid #ddd;position:relative;}
 .met-member-safety .media:first-child{border-top:none;}

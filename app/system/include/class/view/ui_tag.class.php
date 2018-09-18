@@ -91,15 +91,19 @@ $user_name=$_M["user"]?$_M["user"]["username"]:"";
 <?php
 if($lang_json_file_ok){
     $basic_css_name=$metinfover_v2?"":"_web";
-    $isLteIe9=strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 9")!==false || strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 8")!==false;
-    if($isLteIe9){
+    $is_lte_ie9=strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 9")!==false || strpos($_SERVER["HTTP_USER_AGENT"],"MSIE 8")!==false;
+    if($is_lte_ie9){
+        $lteie9_css_filemtime = filemtime(PATH_WEB."public/ui/v2/static/css/basic".$basic_css_name."-lteie9-1.css");
 ?>
-<link href="{$url.site}app/system/include/static2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="{$url.site}app/system/include/static2/css/bootstrap-extend.min.css" rel="stylesheet" type="text/css">
+<link href="{$url.site}app/system/include/static2/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="{$url.site}app/system/include/static2/vendor/bootstrap/bootstrap-extend.min.css" rel="stylesheet" type="text/css">
 <link href="{$url.site}app/system/include/static2/assets/css/site.min.css" rel="stylesheet" type="text/css">
-<link href="{$url.site}public/ui/v2/static/css/basic{$basic_css_name}-lteie9-1.css?{$met_file_version}" rel="stylesheet" type="text/css">
-<?php }else{ ?>
-<link rel="stylesheet" type="text/css" href="{$url.site}public/ui/v2/static/css/basic{$basic_css_name}.css?{$met_file_version}">
+<link href="{$url.site}public/ui/v2/static/css/basic{$basic_css_name}-lteie9-1.css?{$lteie9_css_filemtime}" rel="stylesheet" type="text/css">
+<?php
+    }else{
+        $basic_css_filemtime = filemtime(PATH_WEB."public/ui/v2/static/css/basic".$basic_css_name.".css");
+?>
+<link rel="stylesheet" type="text/css" href="{$url.site}public/ui/v2/static/css/basic{$basic_css_name}.css?{$basic_css_filemtime}">
 <?php
     }
     if($metinfover_v2){
@@ -111,7 +115,13 @@ if($lang_json_file_ok){
         }
         if($met_page){
             if($met_page == 404) $met_page = "show";
-            $page_css_time = filemtime(PATH_TEM."cache/".$met_page."_".$_M["lang"].".css");
+            $page_css = PATH_TEM."cache/".$met_page."_".$_M["lang"].".css";
+            if(!file_exists($page_css)){
+                load::sys_class(\'view/ui_compile\');
+                $ui_compile = new ui_compile();
+                $ui_compile->parse_page($met_page);
+            }
+            $page_css_time = filemtime($page_css);
 ?>
 <link rel="stylesheet" type="text/css" href="{$c.met_weburl}templates/{$c.met_skin_user}/cache/{$met_page}_{$_M["lang"]}.css?{$page_css_time}">
 <?php
@@ -134,6 +144,7 @@ body{
     background-image: url({$g.bodybgimg}) !important;background-position: center;background-repeat: no-repeat;
 <?php } ?>
     background-color:{$g.bodybgcolor} !important;font-family:{$g.met_font} !important;}
+h1,h2,h3,h4,h5,h6{font-family:{$g.met_font} !important;}
 </style>
 <!--[if lte IE 9]>
 <script src="{$_M["url"]["site"]}public/ui/v2/static/js/lteie9.js"></script>
@@ -206,8 +217,13 @@ if(typeof jQuery != "undefined"){
 <script src="{$c.met_weburl}cache/lang_json_{$data.lang}.js?{$met_lang_time}"></script>
 <?php
     if($c["shopv2_open"]){
+        $shop_js_filemtime = filemtime(PATH_ALL_APP."shop/web/templates/met/js/own.js");
+        if(($metinfover_v2=="v2" && $template_type) || $metinfover_v2!="v2"){
+            $app_js_filemtime = filemtime(PATH_WEB."public/ui/v2/static/js/app.js");
 ?>
-<script src="{$c.met_weburl}app/app/shop/web/templates/met/js/own.js?{$met_file_version}"></script>
+<script src="{$url.site}public/ui/v2/static/js/app.js?{$app_js_filemtime}"></script>
+<?php } ?>
+<script src="{$url.shop_ui}js/own.js?{$shop_js_filemtime}"></script>
 <?php
     }
     if(is_mobile() && $c["met_footstat_mobile"]){

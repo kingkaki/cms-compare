@@ -22,7 +22,7 @@ class ui_compile
     /**
      * 需要可视化的字段
      */
-    public $fields = array('name','value','title','keywords','description','content','valueinfo','defaultvalue','imgurl','uip_default','uip_value','img_path','columnimg','icon','imgurls','info','content1','content2','content3','content4','position');
+    public $fields = array('name','value','title','keywords','description','content','valueinfo','defaultvalue','imgurl','uip_default','uip_value','img_path','columnimg','icon','imgurls','info','content1','content2','content3','content4','position','img_title','img_des');
     /**
      * 需要可视化的表
      */
@@ -553,7 +553,11 @@ class ui_compile
             if(!$realval){
                 $val = $para;
             }else{
-                $val = $_M['config']['met_weburl'].str_replace('../', '', $realval).$para;
+                // 如果是外部图片，不增加网站url
+                $val = str_replace('../', '', $realval).$para;
+                if(!strstr($val, 'http')){
+                    $val = $_M['config']['met_weburl'].$val;
+                }
             }
 
         }
@@ -572,7 +576,7 @@ class ui_compile
 
                         if(self::checkImg($key)){
                             if(!$v){
-                                $v = $_M['config']['site'].'public/images/metinfo.gif';
+                                $v = $_M['config']['site'].$_M['config']['met_agents_img'];
                             }
                             $rs[$key]=$v."?met-id={$rs['id']}&met-table={$tableName}&met-field={$key}";
                         }else{
@@ -598,7 +602,7 @@ class ui_compile
                         if(self::checkField($key)){
                             if(self::checkImg($key)){
                                 if(!$val){
-                                    $val = $_M['config']['site'].'public/images/metinfo.gif';
+                                    $val = $_M['config']['site'].$_M['config']['met_agents_img'];
                                 }
                                 // 图片
                                 $rs[$k][$key] = $val."?met-id={$rs[$k]['id']}&met-table={$tableName}&met-field={$key}";

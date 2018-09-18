@@ -2,12 +2,14 @@
 # MetInfo Enterprise Content Management System
 # Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
 defined('IN_MET') or exit('No permission');
-if(!$foot_no){
+$basic_admin_js_time = filemtime(PATH_WEB.'public/ui/v2/static/js/basic_admin.js');
+$lang_json_admin_js_time = filemtime(PATH_WEB.'cache/lang_json_admin_'.$_M['lang'].'.js');
+if(!$foot_no && !$_M['foot_no']){
 	$foot = str_replace('$metcms_v',$_M['config']['metcms_v'], $_M['config']['met_agents_copyright_foot']);
 	$foot = str_replace('$m_now_year',date('Y',time()), $foot);
 ?>
 </div>
-<footer class="metadmin-foot container-fluid m-t-10 grey-600">{$foot}</footer>
+<footer class="metadmin-foot container-fluid m-y-10 grey-600">{$foot}</footer>
 <?php } ?>
 <button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top" hidden><i class="icon wb-chevron-up" aria-hidden="true"></i></button>
 </body>
@@ -44,9 +46,11 @@ MET['url']['own']="{$_M['url']['own']}";
 MET['url']['own_tem']="{$_M['url']['own_tem']}";
 MET['url']['api']="{$_M['url']['api']}";
 </script>
-<script src="{$_M['url']['site']}public/ui/v2/static/js/basic_admin.js?{$met_file_version}"></script>
-<script src="{$_M['url']['site']}cache/lang_json_admin_{$_M['langset']}.js?{$met_file_version}"></script>
-<?php if(file_exists(PATH_OWN_FILE."templates/js/own.js")){ ?>
-<script src="{$_M['url']['own_tem']}js/own.js?{$met_file_version}"></script>
+<script src="{$_M['url']['site']}public/ui/v2/static/js/basic_admin.js?{$basic_admin_js_time}"></script>
+<script src="{$_M['url']['site']}cache/lang_json_admin_{$_M['langset']}.js?{$lang_json_admin_js_time}"></script>
+<?php if(file_exists(PATH_OWN_FILE.'templates/js/own.js')){
+	$own_js_time = filemtime(PATH_OWN_FILE.'templates/js/own.js');
+?>
+<script src="{$_M['url']['own_tem']}js/own.js?{$own_js_time}"></script>
 <?php } ?>
 </html>

@@ -331,7 +331,11 @@ class feedback_admin extends message_admin {
     $lang = $_M[form][lang];
     $where = "lang='{$lang}' AND class1 = {$_M['form']['class1']} ";
     $met_fd_showcol = DB::get_one("select * from {$_M[table][config]} where name='met_fd_showcol' and lang='{$_M[form][lang]}' and columnid={$_M[form][class1]}");
-    $met_fd_showcol = explode('|', $met_fd_showcol['value']);
+      if ($met_fd_showcol['value']) {
+          $met_fd_showcol = explode('|', $met_fd_showcol['value']);
+      }else{
+          $met_fd_showcol = '';
+      }
     $userlist = $this->json_list('', '');
 
       $class1 = $_M['form']['class1'];
